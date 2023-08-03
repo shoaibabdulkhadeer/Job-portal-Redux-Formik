@@ -1,99 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-*{
+* {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #6441A5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- padding: 20px;
-  }
-  
-  .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-   
-label{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #6441A5;
+  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+  background: linear-gradient(to right, #2a0845, #6441A5);
+  padding: 20px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
   font-weight: bold;
 }
 
-  .title{
-    text-align: center;
-  }
+.title {
+  text-align: center;
+  padding: 5px;
+}
+
+.login-form {
+  width: 520px;
+  background-color: rgb(255, 255, 255);
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 4px, rgba(0, 0, 0, 0.7) 0px 7px 13px -3px, rgba(0, 0, 0, 0.5) 0px -3px 0px inset;
+}
+
+.login-form h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+.icons{
+  position: absolute;
+  bottom: 18%;
+  left: 2%;
+  color: #007bff;
+
+
+ 
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  padding-left: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 7px 13px -3px, rgba(0, 0, 0, 0.7) 0px -3px 0px inset;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 480px) {
 
   .login-form {
-    width: 520px;
-     background-color: rgb(255, 255, 255);
-    padding: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 10px;
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px; 
-    margin: 6px 0px;
-    box-sizing: border-box;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
   }
 
-  @media screen and (max-width: 480px) {
-    .login-form {
-      width: 100%;
-    }
-  
-    .form-group {
-      margin-bottom: 15px;
-    }
-  
-    .form-group input {
-      padding: 12px;
-    }
-  
-    button {
-      padding: 12px;
-    }
+  .form-group {
+    margin-bottom: 0px;
   }
+
+  .form-group input {
+    padding: 0px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
