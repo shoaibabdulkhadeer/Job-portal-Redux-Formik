@@ -39,7 +39,7 @@ label {
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 4px, rgba(0, 0, 0, 0.7) 0px 7px 13px -3px, rgba(0, 0, 0, 0.5) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 7px 13px -3px, rgba(0, 0, 0, 0.5) 0px -3px 0px inset;
 }
 
 .login-form h2 {
@@ -61,10 +61,11 @@ label {
   position: absolute;
   bottom: 18%;
   left: 2%;
-  color: #007bff;
+  color: #007bff; 
+}
 
-
- 
+.icons:hover{
+  transform: scale(1.3);
 }
 
 .form-group input {

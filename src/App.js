@@ -43,25 +43,25 @@ function App() {
           <div className="form-group">
             <label>Name</label>
             <FaUserCircle className='icons' />
-            <input value={values.name} onChange={handleChange} onBlur={handleBlur} style={{border:touched.name && errors.name? "2px solid red":""}}  type="text" name="name" placeholder="Enter Your Name" />
+            <input value={values.name} onChange={handleChange} onBlur={handleBlur} style={{border:touched.name && errors.name? "1px solid red":""}}  type="text" name="name" placeholder="Enter Your Name" />
           </div>
           {errors.name && touched.name ? <p style={{ color: "red", margin: "0px" }} >{errors.name}</p> : null}
           <div className="form-group">
             <label>Email</label>
             <MdEmail className='icons' />
-            <input value={values.email} style={{border:touched.email && errors.email?"2px solid red":""}} onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Enter Your Email" />
+            <input value={values.email} style={{border:touched.email && errors.email?" 1px solid red":""}} onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Enter Your Email" />
           </div>
           {errors.email && touched.email ? <p style={{ color: "red", margin: "0px" }} >{errors.email}</p> : null}
           <div className="form-group">
             <label>Password:</label>
             <FaLock className='icons' />
-            <input value={values.password} style={{border:touched.password && errors.password?"2px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name="password" placeholder="Enter Your Password" />
+            <input value={values.password} style={{border:touched.password && errors.password?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name="password" placeholder="Enter Your Password" />
           </div>
           {errors.password && touched.password ? <p style={{ color: "red", margin: "0px" }} >{errors.password}</p> : null}
           <div className="form-group">
             <label>Confirm Password:</label>
             <FaLock className='icons' />
-            <input value={values.confirmpassword} style={{border:touched.confirmpassword && errors.confirmpassword ?"2px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name='confirmpassword' confirm="confirmpassword" placeholder="Confirm Your Password" />
+            <input value={values.confirmpassword} style={{border:touched.confirmpassword && errors.confirmpassword ?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name='confirmpassword' confirm="confirmpassword" placeholder="Confirm Your Password" />
           </div>
           {errors.confirmpassword && touched.confirmpassword ? <p style={{ color: "red", margin: "0px" }} >{errors.confirmpassword}</p> : null}
           <button type="submit">Login</button>
