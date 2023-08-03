@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 *{
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -15,28 +18,31 @@ background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, F
     display: flex;
     justify-content: center;
     align-items: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
    
+label{
+  font-weight: bold;
+}
+
   .title{
     text-align: center;
   }
 
   .login-form {
-    width: 420px;
+    width: 520px;
      background-color: rgb(255, 255, 255);
-    padding: 60px;
+    padding: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   .login-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .form-group {
@@ -50,12 +56,12 @@ background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, F
   
   .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px; 
     margin: 6px 0px;
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
   
   button {
@@ -67,6 +73,7 @@ background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, F
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   button:hover {
