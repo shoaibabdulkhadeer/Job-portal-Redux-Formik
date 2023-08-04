@@ -26,7 +26,7 @@ const Users = () => {
                     <PiUserSquareDuotone size={70} style={{color:"blue"}}/>
                     <p> Name : {x.name}</p>
                     <p>Email : {x.email}</p>
-                    <button onClick={() => dispatch(filterData(x.id))}>delete</button>
+                    <button onClick={() => dispatch(filterData(x.id))} style={{backgroundColor:"red"}}>BAN USER</button>
                 </div>
             )
          })}

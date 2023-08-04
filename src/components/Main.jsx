@@ -12,7 +12,7 @@ const Main = ({data,setData}) => {
     const signupschema = Yup.object({
         name: Yup.string().min(4).max(30).required("name is required"),
         email: Yup.string().email().required("email is required"),
-        password: Yup.string().min(6).max(30).required("password is required"),
+        password: Yup.string().min(5).max(30).required("password is required"),
         confirmpassword: Yup.string()
           .required("password must match")
           .oneOf([Yup.ref("password"), null], "Password must match"),
