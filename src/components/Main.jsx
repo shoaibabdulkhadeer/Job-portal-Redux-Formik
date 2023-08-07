@@ -5,10 +5,14 @@ import { MdEmail } from 'react-icons/md';
 import { FaLock } from 'react-icons/fa';
 import {useDispatch} from 'react-redux' 
 import {dataList} from '../features/List'
+import { FaTwitter } from 'react-icons/fa';
+import { BiLogoInstagramAlt } from 'react-icons/bi';
+import { FaFacebook } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io';
 import * as Yup from 'yup';
 
-const Main = ({data,setData}) => {
 
+const Main = ({data,setData}) => {
     const signupschema = Yup.object({
         name: Yup.string().min(4).max(30).required("name is required"),
         email: Yup.string().email().required("email is required"),
@@ -19,7 +23,6 @@ const Main = ({data,setData}) => {
       })
     
       const dispatch = useDispatch() 
-
       const initialValues = {
         name: "",
         email: "",
@@ -39,8 +42,8 @@ const Main = ({data,setData}) => {
           alert("Successfully submitted")
         }
       })
-
       console.log(data)
+
   return (
     <div className='main'>
          <div className='leftcol'>
@@ -57,25 +60,25 @@ const Main = ({data,setData}) => {
         <h3 className='title'>Find a job & grow your career</h3>
         <form className="form-container" onSubmit={handleSubmit} >
           <div className="form-group">
-            <label>Full Name * </label>
+            <label>Full Name <span style={{color:"red"}}> * </span> </label>
             <FaUserCircle className='icons' />
             <input value={values.name} onChange={handleChange} onBlur={handleBlur} style={{border:touched.name && errors.name? "1px solid red":""}}  type="text" name="name" placeholder="Enter Your Name" />
           </div>
           {errors.name && touched.name ? <p style={{ color: "red", margin: "0px" }} >{errors.name}</p> : null}
           <div className="form-group">
-            <label>Email ID *</label>
+            <label>Email ID <span style={{color:"red"}}> * </span></label>
             <MdEmail className='icons' />
             <input value={values.email} style={{border:touched.email && errors.email?" 1px solid red":""}} onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Tell us Your Email ID" />
           </div>
           {errors.email && touched.email ? <p style={{ color: "red", margin: "0px" }} >{errors.email}</p> : null}
           <div className="form-group">
-            <label>Password *</label>
+            <label>Password <span style={{color:"red"}}> * </span></label>
             <FaLock className='icons' />
             <input value={values.password} style={{border:touched.password && errors.password?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name="password" placeholder="Create Password for Your Account" />
           </div>
-          {errors.password && touched.password ? <p style={{ color: "red", margin: "0px" }} >{errors.password}</p> : null}
+          {errors.password && touched.password? <p style={{ color: "red", margin: "0px" }} >{errors.password}</p> : null}
           <div className="form-group">
-            <label>Confirm Password *</label>
+            <label>Confirm Password <span style={{color:"red"}}> * </span></label>
             <FaLock className='icons' />
             <input value={values.confirmpassword} style={{border:touched.confirmpassword && errors.confirmpassword ?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name='confirmpassword' confirm="confirmpassword" placeholder="Confirm Your Password" />
           </div>
@@ -88,8 +91,17 @@ const Main = ({data,setData}) => {
             <input type="file"/>
 
           </div>
+
      
+  
           <button type="submit">Register now</button>
+
+              <div className='socialicons'>
+                  <FaTwitter className='ico' style={{color:"blue"}} size={25}/>
+                   <BiLogoInstagramAlt className='ico' style={{color:"red"}} size={25} />
+                   <FaFacebook className='ico' style={{color:"blue"}} size={25}/>
+                    <IoLogoWhatsapp className='ico' style={{color:"green"}} size={25}/>                
+              </div>
 
         </form>
       </div>
