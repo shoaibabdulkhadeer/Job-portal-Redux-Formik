@@ -44,7 +44,7 @@ const Main = ({data,setData}) => {
   return (
     <div className='main'>
          <div className='leftcol'>
-             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKd95lSzoGgtRYfWaF1FVswfREFC7ej-ZiA&usqp=CAU' alt='' width={180} style={{alignSelf:"center",marginBottom:"20px"}}/>
+             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKd95lSzoGgtRYfWaF1FVswfREFC7ej-ZiA&usqp=CAU' className='tdpic' alt='' width={180} style={{alignSelf:"center",marginBottom:"20px"}}/>
              <h3 style={{alignSelf:"center"}}>On registering, you can</h3>
              <p style={{display:"flex",gap:"5px"}}><MdVerified size={23} className='icontick'/> Build your profile and let recruiters find you</p>
              <p style={{display:"flex",gap:"5px"}}><MdVerified size={23}  className='icontick'/>  Get job postings delivered right to your email</p>
@@ -57,25 +57,25 @@ const Main = ({data,setData}) => {
         <h3 className='title'>Find a job & grow your career</h3>
         <form className="form-container" onSubmit={handleSubmit} >
           <div className="form-group">
-            <label>Full Name</label>
+            <label>Full Name * </label>
             <FaUserCircle className='icons' />
             <input value={values.name} onChange={handleChange} onBlur={handleBlur} style={{border:touched.name && errors.name? "1px solid red":""}}  type="text" name="name" placeholder="Enter Your Name" />
           </div>
           {errors.name && touched.name ? <p style={{ color: "red", margin: "0px" }} >{errors.name}</p> : null}
           <div className="form-group">
-            <label>Email ID</label>
+            <label>Email ID *</label>
             <MdEmail className='icons' />
             <input value={values.email} style={{border:touched.email && errors.email?" 1px solid red":""}} onChange={handleChange} onBlur={handleBlur} type="email" name="email" placeholder="Tell us Your Email ID" />
           </div>
           {errors.email && touched.email ? <p style={{ color: "red", margin: "0px" }} >{errors.email}</p> : null}
           <div className="form-group">
-            <label>Password:</label>
+            <label>Password *</label>
             <FaLock className='icons' />
             <input value={values.password} style={{border:touched.password && errors.password?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name="password" placeholder="Create Password for Your Account" />
           </div>
           {errors.password && touched.password ? <p style={{ color: "red", margin: "0px" }} >{errors.password}</p> : null}
           <div className="form-group">
-            <label>Confirm Password:</label>
+            <label>Confirm Password *</label>
             <FaLock className='icons' />
             <input value={values.confirmpassword} style={{border:touched.confirmpassword && errors.confirmpassword ?"1px solid red":""}}  onChange={handleChange} onBlur={handleBlur} type="password" name='confirmpassword' confirm="confirmpassword" placeholder="Confirm Your Password" />
           </div>
@@ -93,8 +93,7 @@ const Main = ({data,setData}) => {
 
         </form>
       </div>
-
-      
+  
     </div>
   )
 }

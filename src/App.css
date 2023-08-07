@@ -20,7 +20,6 @@ body {
 .main {
   display: flex;
   justify-content: center;
-
 }
 
 .leftcol{
@@ -30,7 +29,7 @@ body {
  
  padding: 30px;
  margin: 0px 15px;
- height: 400px;
+min-height: 400px;
  gap: 5px;
  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
 border-radius: 15px;
@@ -49,7 +48,7 @@ label {
 .login-form {
   width: 770px;
   background-color: rgb(255, 255, 255);
-  padding: 50px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
   
@@ -121,7 +120,13 @@ button:active{
   transform: scale(0.7);
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 680px) {
+
+  body{
+   font-size: 12px;
+   
+  }
 
   .login-form {
     width: 100%;
@@ -132,13 +137,40 @@ button:active{
   }
 
   .form-group input {
-    padding: 0px;
+    padding: 2px;
   }
 
   button {
-    padding: 10px;
+    padding: 5px;
+  }
+
+  .main{
+    flex-direction: column;
+  }
+
+  .leftcol{
+    padding: 3px;
+    text-align: center;
+    width: 75%;
+     align-self: center;
+     margin: 5px 0px;
+  }
+
+  .tdpic{
+   width: 10rem;
+   margin: 0px;
+  }
+
+  .form-group input {
+    padding-left: 25px;
   }
 }
 
 
 
+@media screen and (max-width: 880px) { 
+
+   .main{
+    flex-direction: column;
+  }
+}
