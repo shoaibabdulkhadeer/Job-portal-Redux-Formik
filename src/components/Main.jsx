@@ -44,7 +44,7 @@ const Main = ({data,setData}) => {
   return (
     <div className='main'>
          <div className='leftcol'>
-             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKd95lSzoGgtRYfWaF1FVswfREFC7ej-ZiA&usqp=CAU' className='tdpic' alt='' width={180} style={{alignSelf:"center",marginBottom:"20px"}}/>
+             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKd95lSzoGgtRYfWaF1FVswfREFC7ej-ZiA&usqp=CAU' className='tdpic' alt='' width={200} style={{alignSelf:"center",marginBottom:"20px"}}/>
              <h3 style={{alignSelf:"center"}}>On registering, you can</h3>
              <p style={{display:"flex",gap:"5px"}}><MdVerified size={23} className='icontick'/> Build your profile and let recruiters find you</p>
              <p style={{display:"flex",gap:"5px"}}><MdVerified size={23}  className='icontick'/>  Get job postings delivered right to your email</p>
