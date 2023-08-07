@@ -11,7 +11,6 @@ import { FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import * as Yup from 'yup';
 
-
 const Main = ({data,setData}) => {
     const signupschema = Yup.object({
         name: Yup.string().min(4).max(30).required("name is required"),
@@ -19,7 +18,7 @@ const Main = ({data,setData}) => {
         password: Yup.string().min(5).max(30).required("password is required"),
         confirmpassword: Yup.string()
           .required("password must match")
-          .oneOf([Yup.ref("password"), null], "Password must match"),
+          .oneOf([Yup.ref("password"), null], "Password must match")
       })
     
       const dispatch = useDispatch() 
@@ -55,7 +54,6 @@ const Main = ({data,setData}) => {
         </div>
         
        
-
       <div className="login-form">
         <h3 className='title'>Find a job & grow your career</h3>
         <form className="form-container" onSubmit={handleSubmit} >
@@ -92,8 +90,6 @@ const Main = ({data,setData}) => {
 
           </div>
 
-     
-  
           <button type="submit">Register now</button>
 
               <div className='socialicons'>
